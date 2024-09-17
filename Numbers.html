@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidsZone</title>
+    <link rel="icon" href="assests/logo3.jpg" type="image/icon type">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- ============== Bootstrap Link =========== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- =============== Font Awesome Link ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        overflow-x: hidden;
+    }
+
+    /* ============ Navbar Color and Hover ============ */
+    .navbar .navbar-nav .nav-link:hover {
+        background-color: #ff0381;
+        color: #ffd500;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 0.6em;
+        font-size: 1.2em;
+        transition: all 0.5s;
+    }
+
+    .navbar .navbar-brand {
+        padding: 0 0.6em;
+        font-size: 1.5em;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .navbar {
+            padding: 0;
+        }
+
+        .navbar .navbar-nav .nav-link {
+            padding: 1em 0.7em;
+        }
+
+        .navbar .navbar-brand {
+            padding: 0 0.8em;
+        }
+
+        #login {
+            padding: 1em 0.7em;
+        }
+
+
+
+    }
+
+    #login {
+        color: #ff0381;
+
+    }
+
+    #login:hover {
+        color: #ffd500;
+        background-color: #ff0381;
+        padding: 0.6em;
+        font-size: 1.2em;
+        transition: all 0.5s;
+    }
+
+
+
+    /* =========== Scroll Bar ===== */
+    ::-webkit-scrollbar {
+        width: 0.625rem;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(228, 76, 76);
+    }
+
+    /* ============= Navbar Images =========== */
+    #home {
+        height: 50px;
+        width: 50px;
+    }
+
+    #Alphabets {
+        height: 50px;
+        width: 50px;
+    }
+
+    #Numbers {
+        height: 50px;
+        width: 50px;
+    }
+
+    footer a {
+        outline: none;
+        text-decoration-line: none;
+    }
+
+
+    .card {
+        margin-top: 10px;
+        
+
+    }
+
+    .flip-card {
+        perspective: 1000px;
+        cursor: pointer;
+        width: 200px;
+        max-width: 200px;
+        height: 200px;
+        position: relative;
+    }
+
+    .flip-card-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateX(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-back {
+        transform: rotateX(180deg);
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assests/logo4.png" alt="Kids Zone" width="80" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><img src="assests/home.png"
+                                alt="" id="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Alphabets.html"><img src="assests/activities1.png" alt=""
+                                id="Alphabets">ABC's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Numbers.html"><img src="assests/123.png" alt="" id="Numbers">123</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Arithmatic.html"><img src="assests/arithmetic.png" alt=""
+                                id="Numbers">Arithmatic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PrayersandRhymes.html"><img src="assests/rhymes (2).png" alt=""
+                                id="Numbers">Prayers and Rhymes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Shop.html"><img src="assests/shop.png" alt=""
+                                id="Numbers">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Worksheets.html"><img src="assests/activities3.png" alt=""
+                                id="Numbers">Worksheets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html"><img src="assests/about us.png" alt=""
+                                id="Numbers">About Us</a>
+                    </li>
+                </ul>
+                <a class="nav-link" href="loginsignup.html" id="login"><i class="fa-solid fa-users"></i>Sign Up/ Log
+                    In</a>
+            </div>
+        </div>
+    </nav>
+    <img src="assests/Numbers/numbanner.png" style="width: 100%; height: 500px;" class="img-fluid" alt="" id="image">
+
+    <div class="container-fluid mt-5 mb-5 mx-5 ms-5">
+        <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6  g-1  justify-content-center">
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/1One.png" alt="Number 1" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/oneback.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/1.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/2Two.png" alt="Number 2" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/Twoback.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/2.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/3Three.png" alt="Number 3" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/Threeback.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/3.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/4Four.png" alt="Number 4" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/4back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/4.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/5Five.png" alt="Number 5" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/5back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/5.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+           
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/6Six.png" alt="Number 6" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/6back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/6.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/7Seven.png" alt="Number 7" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/7back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/7.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/8Eight.png" alt="Number 8" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/8back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/8.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/9Nine.png" alt="Number 9" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/9back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/9.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/10Ten.png" alt="Number 10" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/10back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/10.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/11Eleven.png" alt="Number 11" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/11back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/11.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/12Twelve.png" alt="Number 12" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/12back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/12.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/13Thirteen.png" alt="Number 13" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/13back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/13.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/14Fourteen.png" alt="Number 14" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/14back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/14.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/15Fiveteen.png" alt="Number 15" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/15back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/15.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/16Sixteen.png" alt="Number 16" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/16back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/16.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/17Seventeen.png" alt="Number 17" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/17back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/17.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/18Eighteen.png" alt="Number 18" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/18back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/18.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/19Nineteen.png" alt="Number 19" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/19back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/19.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/20Tenty.png" alt="Number 20" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/20back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/20.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/21Twentyone.png" alt="Number 21" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/21back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/21.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/22Twentytwo.png" alt="Number 22" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/22back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/22.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/23Twentythree.png" alt="Number 23" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/23back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/23.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/24Twentyfour.png" alt="Number 24" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/24back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/24.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/25Twentyfive.png" alt="Number 25" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/25back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/25.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/26Twentysix.png" alt="Number 26" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/26back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/26.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/27TwentySeven.png" alt="Number 27" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/27back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/27.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/28Twentyeight.png" alt="Number 28" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/28back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/28.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/29TwentyNine.png" alt="Number 29" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/29back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/29.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/30Thirty.png" alt="Number 30" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/30back.png" alt="ant" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/30.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/31Thirty One.png" alt="Number 31" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/31.png" alt="fruit baskets" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/31.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/32Thirty Two.png" alt="Number 32" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/32.png" alt="toy cars" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/32.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/33Thirty Three.png" alt="Number 33" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/33.png" alt="balloons" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/33.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/34Thirty four.png" alt="Number 34" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/34.png" alt="books" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/34.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/35Thirty Five.png" alt="Number 35" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/35.png" alt="flowers" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/35.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/36Thirty Six.png" alt="Number 36" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/36.png" alt="pencils" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/36.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/37Thirty Seven.png" alt="Number 37" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/37.png" alt="apples" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/37.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/38Thirty eight.png" alt="Number 38" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/38.png" alt="kites" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/38.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/39Thirty nine.png" alt="Number 39" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/39.png" alt="cups" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/39.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/40Forty.png" alt="Number 40" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/40.png" alt="chairs" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/40.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/41Forty one.png" alt="Number 41" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/41.png" alt="stars" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/41.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/42Forty two.png" alt="Number 42" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/42.png" alt="crayons" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/42.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/43Forty three.png" alt="Number 43" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/43.png" alt="candies" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/43.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/44Forty four.png" alt="Number 44" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/44.png" alt="trees" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/44.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/45Forty five.png" alt="Number 45" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/45.png" alt="oranges" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/45.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/46Forty six.png" alt="Number 46" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/46.png" alt="birds" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/46.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/47Forty seven.png" alt="Number 47" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/47.png" alt="drums" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/47.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/48Forty eight.png" alt="Number 48" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/48.png" alt="hats" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/48.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/49Fourty Nine.png" alt="Number 49" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/49.png" alt="bicycles" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/49.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-body">
+                            <img src="assests/Numbers/50Fifty.png" alt="Number 50" class="img-fluid">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="assests/Numbers/Back/50.png" alt="cakes" class="img-fluid">
+                            <audio id="cardAudio" controls>
+                                <source src="assests/Audio/50.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+
+
+
+
+  <!-- Footer -->
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #ffd500;">
+        <!-- Grid container -->
+        <div class="container-fluid">
+            <!-- Section: Links -->
+            <section class="mt-5">
+                <!-- Grid row-->
+                <div class="row text-center d-flex justify-content-center pt-5">
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="index.html" class="text-decoration-none" style="color: #ff5c77;">Home</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Arithmatic.html" class="text-decoration-none"
+                                style="color: #00b8d9;">Arithmetic</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="PrayersandRhymes.html" class="text-decoration-none" style="color: #ff5c77;">Prayers
+                                and Nursery
+                                Rhymes</a>
+                        </h6>
+                    </div>
+                     <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Shop.html" class="text-decoration-none" style="color: #00b8d9;">Shop</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Worksheets.html" class="text-decoration-none"
+                                style="color: #ff5c77;">Worksheets</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="About Us.html" class="text-decoration-none" style="color: #00b8d9;">About Us</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Privacy Policy.html" class="text-decoration-none" style="color: #ff5c77;">Privacy
+                                Policy</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-5" style="border-color: #ff5c77;" />
+
+            <!-- Section: Text -->
+            <section class="mb-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <p>
+                            Thank you for visiting Kids Zone, where learning and fun go hand in hand! Explore our
+                            engaging activities,
+                            from alphabet learning to arithmetic challenges and interactive worksheets. Join us in
+                            nurturing young
+                            minds and fostering a love for learning. Stay updated with our latest events and programs!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Social -->
+            <!-- Section: Social -->
+            <!-- Section: Social -->
+            <section class="text-center mb-5">
+                <a href="https://www.facebook.com/yourpage" class="text-danger me-4">
+                    <i class="fab fa-facebook-f" style="color: #ff5c77; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.twitter.com/yourpage" class="text-primary me-4">
+                    <i class="fab fa-twitter" style="color: #00b8d9; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.google.com/yourpage" class="text-danger me-4">
+                    <i class="fab fa-google" style="color: #c62828; font-size: 2rem;"></i>
+                    <!-- Darkened the Google color -->
+                </a>
+                <a href="https://www.instagram.com/yourpage" class="text-danger me-4">
+                    <i class="fab fa-instagram" style="color: #ff5c77; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.linkedin.com/yourpage" class="text-info me-4">
+                    <i class="fab fa-linkedin" style="color: #00b8d9; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.github.com/yourpage" class="text-dark me-4">
+                    <i class="fab fa-github" style="color: #24292e; font-size: 2rem;"></i>
+                    <!-- Darkened the GitHub color -->
+                </a>
+            </section>
+
+            <!-- Section: Social -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(255, 34, 0, 0.465);">
+            © 2024 Copyright:
+            <a class="text-white" href="https://KidsZone.com/">KidsZone.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Footer -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">YouTube Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="modalVideo" width="100%" height="315" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Use a class selector instead of ID to target all audio elements
+            $('.flip-card').hover(function () {
+                // Find the audio element within the current flip-card and play it
+                $(this).find('audio')[0].play();
+            }, function () {
+                // Find the audio element within the current flip-card, pause, and reset it
+                var audio = $(this).find('audio')[0];
+                audio.pause();
+                audio.currentTime = 0;
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

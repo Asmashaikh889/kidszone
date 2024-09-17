@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidsZone</title>
+
+    <link rel="icon" href="assests/logo5.png" type="image/icon type">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and Icon Library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- =============== Font Awesome Link ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* ============ Navbar Color and Hover ============ */
+        .navbar .navbar-nav .nav-link:hover {
+            background-color: #ff0381;
+            color: #ffd500;
+        }
+
+        .navbar .navbar-nav .nav-link {
+            padding: 0.6em;
+            font-size: 1.2em;
+            transition: all 0.5s;
+        }
+
+        .navbar .navbar-brand {
+            padding: 0 0.6em;
+            font-size: 1.5em;
+        }
+
+        @media only screen and (min-width: 992px) {
+            .navbar {
+                padding: 0;
+            }
+
+            .navbar .navbar-nav .nav-link {
+                padding: 1em 0.7em;
+            }
+
+            .navbar .navbar-brand {
+                padding: 0 0.8em;
+            }
+
+            #login {
+                padding: 1em 0.7em;
+            }
+
+
+
+        }
+
+        #login {
+            color: #ff0381;
+
+        }
+
+        #login:hover {
+            color: #ffd500;
+            background-color: #ff0381;
+            padding: 0.6em;
+            font-size: 1.2em;
+            transition: all 0.5s;
+        }
+
+
+
+        /* =========== Scroll Bar ===== */
+        ::-webkit-scrollbar {
+            width: 0.625rem;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: white;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(228, 76, 76);
+        }
+
+        /* ============= Navbar Images =========== */
+        #home {
+            height: 50px;
+            width: 50px;
+        }
+
+        #Alphabets {
+            height: 50px;
+            width: 50px;
+        }
+
+        #Numbers {
+            height: 50px;
+            width: 50px;
+        }
+
+        footer a {
+            outline: none;
+            text-decoration-line: none;
+        }
+
+        body {
+            background-image: url('https://prod.drupal.aws.sesamestreet.org/sites/default/files/styles/original/public/1533520829/SolidBackground-Homepage2.png?itok=lN6QrxWn');
+        }
+
+        /* Custom CSS for tabs */
+        .nav-tabs .nav-item .nav-link {
+            border-radius: 25px;
+            /* Rounded corners */
+            padding: 10px 20px;
+            /* Padding */
+            margin-right: 10px;
+            /* Margin between tabs */
+            /* Background color */
+            color: #fff;
+            /* Text color */
+            font-weight: bold;
+            /* Bold text */
+        }
+
+        /* Active tab style */
+        .nav-tabs .nav-item .nav-link.active {
+            color: navy;
+            /* Active text color */
+            position: relative;
+            /* Position relative for the triangle shape */
+        }
+
+        /* Add a triangle shape at the bottom of the active tab */
+        .nav-tabs .nav-item .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            /* Adjust the position of the triangle */
+            left: 50%;
+            transform: translateX(-50%);
+            /* Center the triangle */
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid navy;
+            /* The color of the triangle */
+        }
+
+
+        /* Default and active background color for #tab1 */
+        .nav-tabs .nav-item #tab1.nav-link.active::after {
+            border-top: 10px solid rgb(33, 207, 255);
+            /* Color for #tab1 */
+        }
+
+        /* Default and active background color for #tab2 */
+        .nav-tabs .nav-item #tab2.nav-link.active::after {
+            border-top: 10px solid rgb(255, 152, 0);
+            /* Color for #tab2 */
+        }
+
+        /* Default and active background color for #tab3 */
+        .nav-tabs .nav-item #tab3.nav-link.active::after {
+            border-top: 10px solid rgb(255, 7, 167);
+            /* Color for #tab3 */
+        }
+
+        /* Default and active background color for #tab4 */
+        .nav-tabs .nav-item #tab4.nav-link.active::after {
+            border-top: 10px solid rgb(157, 29, 150);
+            /* Color for #tab4 */
+        }
+
+        /* Default background color for #tab1 */
+        .nav-tabs .nav-item #tab1.nav-link {
+            background-color: rgb(33, 207, 255);
+            /* Default color */
+        }
+
+        /* Default background color for #tab1 */
+        .nav-tabs .nav-item #tab2.nav-link {
+            background-color: rgb(255, 152, 0);
+            /* Default color */
+        }
+
+        /* Default background color for #tab1 */
+        .nav-tabs .nav-item #tab3.nav-link {
+            background-color: rgb(255, 7, 167);
+            /* Default color */
+        }
+
+        /* Default background color for #tab1 */
+        .nav-tabs .nav-item #tab4.nav-link {
+            background-color: rgb(157, 29, 150);
+            /* Default color */
+        }
+
+        /* Center the tabs and set a max-width */
+        .nav-tabs {
+            justify-content: center;
+            /* Center the tabs */
+            max-width: 100%;
+            /* Set a maximum width */
+            margin: 0 auto;
+            /* Center the tabs container */
+        }
+
+        /* ============ Navbar Color and Hover ============ */
+        .navbar .navbar-nav .nav-link:hover {
+            background-color: #ff0381;
+            color: #ffd500;
+        }
+
+        .navbar .navbar-nav .nav-link {
+            padding: 0.6em;
+            font-size: 1.2em;
+            transition: all 0.5s;
+        }
+
+        .navbar .navbar-brand {
+            padding: 0 0.6em;
+            font-size: 1.5em;
+        }
+
+        @media only screen and (min-width: 992px) {
+            .navbar {
+                padding: 0;
+            }
+
+            .navbar .navbar-nav .nav-link {
+                padding: 1em 0.7em;
+            }
+
+            .navbar .navbar-brand {
+                padding: 0 0.8em;
+            }
+
+            #login {
+                padding: 1em 0.7em;
+            }
+
+
+
+        }
+
+        .cardbig {
+            background-color: #FFFFFF;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .cardbig:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card {
+            background-color: #FFFFFF;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            height: 100%;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ensure image and text fit card appropriately */
+        .card-img-top {
+            height: auto;
+            flex-grow: 1;
+        }
+
+        /* Container for text */
+        .container {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            height: 100%;
+            /* Increase the height as per your requirement */
+            display: flex;
+            justify-content: space-between;
+            /* Space between text and icon */
+            align-items: center;
+        }
+
+        /* Play icon styling */
+        /* Adjust the icon */
+        .icon {
+            position: absolute;
+            right: 10px;
+            /* Distance from the right */
+            bottom: 30px;
+            /* Distance from the bottom */
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assests/logo4.png" alt="Kids Zone" width="80" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><img src="assests/home.png"
+                                alt="" id="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Alphabets.html"><img src="assests/activities1.png" alt=""
+                                id="Alphabets">ABC's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Numbers.html"><img src="assests/123.png" alt="" id="Numbers">123</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Arithmatic.html"><img src="assests/arithmetic.png" alt=""
+                                id="Numbers">Arithmatic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PrayersandRhymes.html"><img src="assests/rhymes (2).png" alt=""
+                                id="Numbers">Prayers and Rhymes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Shop.html"><img src="assests/shop.png" alt=""
+                                id="Numbers">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Worksheets.html"><img src="assests/activities3.png" alt=""
+                                id="Numbers">Worksheets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html"><img src="assests/about us.png" alt=""
+                                id="Numbers">About Us</a>
+                    </li>
+                </ul>
+                <a class="nav-link" href="loginsignup.html" id="login"><i class="fa-solid fa-users"></i>Sign Up/ Log
+                    In</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid mt-4 ">
+        <!-- Tabs navigation -->
+        <ul class="nav nav-tabs justify-content-center" id="myTabs" role="tablist">
+            <li class="nav-item mt-5" role="presentation">
+                <button class="nav-link active " id="tab1" data-bs-toggle="tab" data-bs-target="#tab-content1"
+                    type="button" role="tab" aria-controls="tab-content1" aria-selected="true">English Rhymes/انگریزی
+                    نظمیں</button>
+            </li>
+            <li class="nav-item mt-5" role="presentation">
+                <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#tab-content2" type="button"
+                    role="tab" aria-controls="tab-content2" aria-selected="false">Urdu Rhymes/اردو نظمیں</button>
+            </li>
+            <li class="nav-item mt-5" role="presentation">
+                <button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#tab-content3" type="button"
+                    role="tab" aria-controls="tab-content3" aria-selected="false">Moral Stories/اخلاقی کہانیاں</button>
+            </li>
+            <li class="nav-item mt-5" role="presentation">
+                <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#tab-content4" type="button"
+                    role="tab" aria-controls="tab-content4" aria-selected="false">Islamic Videos/اسلامی معلومات</button>
+            </li>
+        </ul>
+
+        <!-- Tab content (not shown in the prompt, but you can add it here) -->
+    </div>
+
+    <!-- Tab content -->
+    <div class="tab-content" id="myTabContent">
+        <!-- Tab 1 -->
+        <div class="tab-pane fade show active " id="tab-content1" role="tabpanel" aria-labelledby="tab1 ">
+            <!-- Place the content of your first tab here -->
+            <div class="container-fluid mt-4">
+                <div class="row align-items-stretch">
+                    <!-- Large image taking up col-5 -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="cardbig d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video-url="https://www.youtube.com/embed/yCjJyiqpAuU">
+                            <img src="images/twinkle.jpg" class="card-img-top img-fluid" alt="Card Image 1">
+                            <div class="container d-flex justify-content-between align-items-center"
+                                style="height: auto;">
+                                <h5><b>Twinkle little Star</b></h5>
+                                <div class="icon">
+                                    <img src="images/download.png" alt="Play Icon" style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6 mt-3">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/F4tHL8reNCs">
+                                    <img src="images/johnyjohny.jpg" class="card-img-top img-fluid" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Johny Johny Yes papa</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/0oKreL1jvkg">
+                                    <img src="images/humpty.jpg" class="card-img-top img-fluid" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Humpty Dumpty</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/uxRQwCpdPnM">
+                                    <img src="images/jackjill.jpg" class="card-img-top img-fluid" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Jack & Jill</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/h5IOgjJx4wc">
+                                    <img src="images/Babyshark.jpg" class="card-img-top img-fluid" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Baby Shark</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid mt-4">
+                <div class="row align-items-stretch">
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/G3KZ07yZyRk">
+                                    <img src="images/hippy advnture.jpg" class="card-img-top img-fluid"
+                                        alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Hippy Advanture</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/Zu6o23Pu0Do">
+                                    <img src="images/rain rain.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Rain Rain</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/TV_x6YUdnvg">
+                                    <img src="images/two little.jpg" class="card-img-top" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Two Little Hands</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/ZaIu32TWX64">
+                                    <img src="images/my red balun.jpg" class="card-img-top" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>My Red Ballon</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/Z9gdMJvYS8g">
+                                    <img src="images/ringa.jpg" class="card-img-top" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Ringa Ringa Roses</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/qM0QgQHv6Q4">
+                                    <img src="images/pufftrain.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Puff a train</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/I4lSF7QDgvM">
+                                    <img src="images/dipdip.jpg" class="card-img-top" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Dip Dip Dip</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/R8nfbeBdHHY">
+                                    <img src="images/seemoon.jpg" class="card-img-top" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>I See The Moon</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 2 -->
+        <div class="tab-pane fade" id="tab-content2" role="tabpanel" aria-labelledby="tab2">
+            <!-- Place the content of your first tab here -->
+            <div class="container-fluid mt-4">
+                <div class="row align-items-stretch">
+                    <!-- Large image taking up col-5 -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="cardbig d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video-url="https://www.youtube.com/embed/Kn0iazTunQI">
+                            <img src="images/bulbull.jpg" class="card-img-top" alt="Card Image 1">
+                            <div class="container d-flex justify-content-between align-items-center"
+                                style="height: auto;">
+                                <h5><b>Bulbul ka bacha</b></h5>
+                                <div class="icon">
+                                    <img src="images/download.png" alt="Play Icon" style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6 mt-3">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/9bQqTgCNmmI">
+                                    <img src="images/alomiyaa.jpg" class="card-img-top" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Alo Miyaan</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/k83yNjbv_Ig">
+                                    <img src="images/abulay.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Abu laye moterCar</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/0MtwvZbBj8Y">
+                                    <img src="images/garmiai.jpg" class="card-img-top" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Garmi ai</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/9wWLAM7CDQs">
+                                    <img src="images/titli.jpg" class="card-img-top" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Titli hun me tittli</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid mt-4">
+                <div class="row align-items-stretch">
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/I7iPODvz95M">
+                                    <img src="images/rajarani.jpg" class="card-img-top" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Raja Rani</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/lwwlrYeZmAo">
+                                    <img src="images/aam.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Aam(mango)</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/vZbigdb2QJ0">
+                                    <img src="images/ohmere.jpg" class="card-img-top" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>ohh mere gory</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/jnx10PASwgA">
+                                    <img src="images/barishai.jpg" class="card-img-top" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Barish ai</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/S8SwoqrxQVU">
+                                    <img src="images/billi.jpg" class="card-img-top" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Billi meny pali hai</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/CUciBrtqFGM">
+                                    <img src="images/machli.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Machli jal ki rani</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/YH0vJ3v4l14">
+                                    <img src="images/akarbakkar.jpg" class="card-img-top" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>akar bakkar</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/r15IxHrC0FA">
+                                    <img src="images/kalumadari.jpg" class="card-img-top" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Kalu Madari</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                            style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Continue for other Moral STories -->
+        <!-- Tab 3 -->
+        <div class="tab-pane fade" id="tab-content3" role="tabpanel" aria-labelledby="tab3">
+            <!-- Place the content of your first tab here -->
+            <div class="container-fluid mt-4">
+                <div class="row align-items-stretch">
+                    <!-- Large image taking up col-5 -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="cardbig d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video-url="https://www.youtube.com/embed/JcbkdvoqqIU">
+                            <img src="images/chakkichakki.jpg" class="card-img-top" alt="Card Image 1">
+                            <div class="container d-flex justify-content-between align-items-center"
+                                style="height: auto;">
+                                <h5><b>Chakki Chakki Namak Nikal</b></h5>
+                                <div class="icon">
+                                    <img src="images/download.png" alt="Play Icon"
+                                        style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6 mt-3">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/kz8lGpiOybc">
+                                    <img src="images/kahilgadha.jpg" class="card-img-top" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>ایک کاہل گدھا</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/IkQ1s4huD9Q">
+                                    <img src="images/sheraya.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>شیر آیاشیر آیا</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/cgNhX6KO3xo">
+                                    <img src="images/pyasakava.jpg" class="card-img-top" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>ایک کوّا پیاسا تھا</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/UayIEps9Y70">
+                                    <img src="images/khargoshKachwa.jpg" class="card-img-top" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>خرگوش اور کچھوا</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid mt-4">
+                <div class="row align-items-stretch">
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/6TDTzNyF2As">
+                                    <img src="images/homework.jpg" class="card-img-top" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>اسکول ہوم ورک</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/Wld3vMGZmMA">
+                                    <img src="images/magicbell.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Magic Bell</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/yo5uhJH0f8g">
+                                    <img src="images/naikikasila.jpg" class="card-img-top" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Naiki Ka Sila</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/dfx7Q1Io42c">
+                                    <img src="images/ziddilarka.jpg" class="card-img-top" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Zidd Ka Anjam</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/QUTYxwTsbiM">
+                                    <img src="images/cleverfish.jpg" class="card-img-top" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Clever Fish</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/3GtD4Un7P4s">
+                                    <img src="images/badhabits.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Bad Habits</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/3wsdaBBNdeo">
+                                    <img src="images/reward.jpg" class="card-img-top" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Reward For honesty</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/ls2-mIaTHP0">
+                                    <img src="images/acheikhlaq.jpg" class="card-img-top" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Ache Ikhlak</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Masnoon duaen-->
+        <div class="tab-pane fade" id="tab-content4" role="tabpanel" aria-labelledby="tab4">
+            <!-- Place the content of your first tab here -->
+            <div class="container-fluid mt-4">
+                <div class="row align-items-stretch">
+                    <!-- Large image taking up col-5 -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="cardbig d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                            data-video-url="https://www.youtube.com/embed/AiwyalmIDU0">
+                            <img src="images/kalma.jpg" class="card-img-top" alt="Card Image 1">
+                            <div class="container d-flex justify-content-between align-items-center"
+                                style="height: auto;">
+                                <h5><b>Pehla kalma</b></h5>
+                                <div class="icon">
+                                    <img src="images/download.png" alt="Play Icon"
+                                        style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6 mt-3">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/7FVCVAQRWbk">
+                                    <img src="images/howtopray.png" class="card-img-top" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>How to Pray</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/aMKnCveaoD0">
+                                    <img src="images/AlFatiha.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Surah Al Fatiha</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://youtube.com/embed/uvhAUB2VxMg?list=PLYklEVcXLxdv6_op0bhXgqnqlkjAYs4dO">
+                                    <img src="images/download1.jpg" class="card-img-top img-fluid" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Prophet Adam (AS)| Quran Stories In Urdu | Urdu Stories</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/NgBkdtrrKLg?list=PLYklEVcXLxdv6_op0bhXgqnqlkjAYs4dO">
+                                    <img src="images/download2.jpg" class="card-img-top img-fluid" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Prophet Nuh (AS) | Quran Stories In Urdu | Urdu Stories</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid mt-4">
+                <div class="row align-items-stretch">
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/cRvxyHqeTX0?list=PLYklEVcXLxdv6_op0bhXgqnqlkjAYs4dO">
+                                    <img src="images/download3.jpg" class="card-img-top" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center img-fluid"
+                                        style="height: auto;">
+                                        <h5><b>Story Of Prophet Hud (AS) | Quran Stories In Urdu | Urdu Stories
+                                            </b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/PFopgCjD7l0?list=PLYklEVcXLxdv6_op0bhXgqnqlkjAYs4dO">
+                                    <img src="images/download4.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Story Of Prophet Saleh (AS) | Quran Stories In Urdu | Urdu Cartoons
+                                            </b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/-5HQ9iH0zQY?list=PLYklEVcXLxdv6_op0bhXgqnqlkjAYs4dO">
+                                    <img src="images/download5.jpg" class="card-img-top" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Prophet Ibrahim (AS) | Part 1 | Quran Stories In Urdu | Urdu Cartoons</b>
+                                        </h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/5eocNXS3Gic?list=PLYklEVcXLxdv6_op0bhXgqnqlkjAYs4dO">
+                                    <img src="images/download6.jpg" class="card-img-top" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Prophet Ibrahim (AS) | Part 2 | Quran Stories In Urdu | Urdu Cartoons</b>
+                                        </h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column for the four cards -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row g-3">
+                            <!-- First row with two cards -->
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/vp6XBdVT2wA?list=PLYklEVcXLxdv6_op0bhXgqnqlkjAYs4dO">
+                                    <img src="images/download7.jpg" class="card-img-top" alt="Card Image 1">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Prophet Ibrahim (AS) | Part 3 | Quran Stories In Urdu | Urdu Cartoons</b>
+                                        </h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/bdNQAayuKGg?list=PLYklEVcXLxdv6_op0bhXgqnqlkjAYs4dO">
+                                    <img src="images/download8.jpg" class="card-img-top" alt="Card Image 2">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Prophet Ishaq (AS) and Yaqub (AS) | Quran Stories In Urdu | Urdu
+                                                Cartoons</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second row with two cards -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/hkSkWt48U5Y?list=PLYklEVcXLxdv6_op0bhXgqnqlkjAYs4dO">
+                                    <img src="images/download9.jpg" class="card-img-top" alt="Card Image 3">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b> Prophet Ishamael (AS) | Ismail (AS) | Quran Stories In Urdu</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <div class="card d-flex flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                    data-video-url="https://www.youtube.com/embed/nL0F7LTEX78?list=PLYklEVcXLxdv6_op0bhXgqnqlkjAYs4dO">
+                                    <img src="images/download10.jpg" class="card-img-top" alt="Card Image 4">
+                                    <div class="container d-flex justify-content-between align-items-center"
+                                        style="height: auto;">
+                                        <h5><b>Prophet Lut (AS) Story | Quran Stories In Urdu | Urdu Cartoons</b></h5>
+                                        <div class="icon">
+                                            <img src="images/download.png" alt="Play Icon"
+                                                style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">YouTube Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="modalVideo" width="100%" height="315" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script>
+        // Get the modal iframe
+        const modalVideo = document.getElementById('modalVideo');
+
+        // Add click event listener to all trigger elements
+        document.querySelectorAll('[data-video-url]').forEach(trigger => {
+            trigger.addEventListener('click', function () {
+                // Get the video URL from the trigger's data attribute
+                const videoUrl = trigger.getAttribute('data-video-url');
+
+                // Update the src of the modal iframe to the video URL
+                modalVideo.src = videoUrl;
+            });
+        });
+        // Add event listener to clear the video when the modal is closed
+        document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+            // Clear the src of the modal iframe to stop the video
+            modalVideo.src = '';
+        });
+    </script>
+
+  <!-- Footer -->
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #ffd500;">
+        <!-- Grid container -->
+        <div class="container-fluid">
+            <!-- Section: Links -->
+            <section class="mt-5">
+                <!-- Grid row-->
+                <div class="row text-center d-flex justify-content-center pt-5">
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="index.html" class="text-decoration-none" style="color: #ff5c77;">Home</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Arithmatic.html" class="text-decoration-none"
+                                style="color: #00b8d9;">Arithmetic</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="PrayersandRhymes.html" class="text-decoration-none" style="color: #ff5c77;">Prayers
+                                and Nursery
+                                Rhymes</a>
+                        </h6>
+                    </div>
+                     <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Shop.html" class="text-decoration-none" style="color: #00b8d9;">Shop</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Worksheets.html" class="text-decoration-none"
+                                style="color: #ff5c77;">Worksheets</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="About Us.html" class="text-decoration-none" style="color: #00b8d9;">About Us</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Privacy Policy.html" class="text-decoration-none" style="color: #ff5c77;">Privacy
+                                Policy</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-5" style="border-color: #ff5c77;" />
+
+            <!-- Section: Text -->
+            <section class="mb-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <p>
+                            Thank you for visiting Kids Zone, where learning and fun go hand in hand! Explore our
+                            engaging activities,
+                            from alphabet learning to arithmetic challenges and interactive worksheets. Join us in
+                            nurturing young
+                            minds and fostering a love for learning. Stay updated with our latest events and programs!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Social -->
+            <!-- Section: Social -->
+            <!-- Section: Social -->
+            <section class="text-center mb-5">
+                <a href="https://www.facebook.com/yourpage" class="text-danger me-4">
+                    <i class="fab fa-facebook-f" style="color: #ff5c77; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.twitter.com/yourpage" class="text-primary me-4">
+                    <i class="fab fa-twitter" style="color: #00b8d9; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.google.com/yourpage" class="text-danger me-4">
+                    <i class="fab fa-google" style="color: #c62828; font-size: 2rem;"></i>
+                    <!-- Darkened the Google color -->
+                </a>
+                <a href="https://www.instagram.com/yourpage" class="text-danger me-4">
+                    <i class="fab fa-instagram" style="color: #ff5c77; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.linkedin.com/yourpage" class="text-info me-4">
+                    <i class="fab fa-linkedin" style="color: #00b8d9; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.github.com/yourpage" class="text-dark me-4">
+                    <i class="fab fa-github" style="color: #24292e; font-size: 2rem;"></i>
+                    <!-- Darkened the GitHub color -->
+                </a>
+            </section>
+
+            <!-- Section: Social -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(255, 34, 0, 0.465);">
+            © 2024 Copyright:
+            <a class="text-white" href="https://KidsZone.com/">KidsZone.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Footer -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">YouTube Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="modalVideo" width="100%" height="315" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidsZone</title>
+    <link rel="icon" href="assests/logo3.jpg" type="image/icon type">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- ============== Bootstrap Link =========== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- =============== Font Awesome Link ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('images/body_back\ \(1\).png');
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        overflow-x: hidden;
+    }
+
+    /* ============ Navbar Color and Hover ============ */
+    .navbar .navbar-nav .nav-link:hover {
+        background-color: #ff0381;
+        color: #ffd500;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 0.6em;
+        font-size: 1.2em;
+        transition: all 0.5s;
+    }
+
+    .navbar .navbar-brand {
+        padding: 0 0.6em;
+        font-size: 1.5em;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .navbar {
+            padding: 0;
+        }
+
+        .navbar .navbar-nav .nav-link {
+            padding: 1em 0.7em;
+        }
+
+        .navbar .navbar-brand {
+            padding: 0 0.8em;
+        }
+
+        #login {
+            padding: 1em 0.7em;
+        }
+
+
+
+    }
+
+    #login {
+        color: #ff0381;
+
+    }
+
+    #login:hover {
+        color: #ffd500;
+        background-color: #ff0381;
+        padding: 0.6em;
+        font-size: 1.2em;
+        transition: all 0.5s;
+    }
+
+
+
+    /* =========== Scroll Bar ===== */
+    ::-webkit-scrollbar {
+        width: 0.625rem;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(228, 76, 76);
+    }
+
+    /* ============= Navbar Images =========== */
+    #home {
+        height: 50px;
+        width: 50px;
+    }
+
+    #Alphabets {
+        height: 50px;
+        width: 50px;
+    }
+
+    #Numbers {
+        height: 50px;
+        width: 50px;
+    }
+
+    footer a {
+        outline: none;
+        text-decoration-line: none;
+    }
+
+
+    .card {
+        margin-top: 10px;
+
+    }
+
+    .flip-card {
+        perspective: 1000px;
+        cursor: pointer;
+        width: 200px;
+        max-width: 200px;
+        height: 200px;
+        position: relative;
+    }
+
+    .flip-card-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateX(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-back {
+        transform: rotateX(180deg);
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assests/logo4.png" alt="Kids Zone" width="80" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><img src="assests/home.png"
+                                alt="" id="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Alphabets.html"><img src="assests/activities1.png" alt=""
+                                id="Alphabets">ABC's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Numbers.html"><img src="assests/123.png" alt="" id="Numbers">123</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Arithmatic.html"><img src="assests/arithmetic.png" alt=""
+                                id="Numbers">Arithmatic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PrayersandRhymes.html"><img src="assests/rhymes (2).png" alt=""
+                                id="Numbers">Prayers and Rhymes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Shop.html"><img src="assests/shop.png" alt="" id="Numbers">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Worksheets.html"><img src="assests/activities3.png" alt=""
+                                id="Numbers">Worksheets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html"><img src="assests/about us.png" alt=""
+                                id="Numbers">About Us</a>
+                    </li>
+                </ul>
+                <a class="nav-link" href="loginsignup.html" id="login"><i class="fa-solid fa-users"></i>Sign Up/ Log
+                    In</a>
+            </div>
+        </div>
+    </nav>
+    <section class="py-5 ">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h1 class="display-3 fw-bold">Welcome to <span class="text-warning">KidsZone</span></h1>
+                    <p class="lead my-4">Explore a world of fun and learning with our wide range of kids' supplies and
+                        educational resources. From toys to books, we have everything to make childhood a magical
+                        adventure!</p><a class="btn btn-lg btn-warning" href="#sf">Browse Now</a>
+                    <p class="text-muted mt-3">For additional details, please refer to our Privacy Policy.</p>
+                </div>
+                <div class="col-lg-6"><img alt="" class="img-fluid" src="assests/blog-2.jpg"></div>
+            </div>
+
+        </div>
+    </section>
+    <div class="container-fluid mt-5 mb-5 text-center">
+        <button class="btn btn-primary mx-3" onclick="showSection('sf')" role="button">storefront</button>
+        <button class="btn btn-warning mx-3" onclick="showSection('ksb')" role="button">Kid's Story Books</button>
+        <button class="btn btn-danger mx-3" onclick="showSection('schsup')" role="button">School Suplies</button>
+        <button class="btn btn-info mx-3" onclick="showSection('link2')" role="button">Kids learning Books</button>
+        <button class="btn btn-success mx-3" onclick="showSection('link3')" role="button">Toys</button>
+    </div>
+
+    <div id="sf" class="section d-flex flex-wrap justify-content-center d-none">
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/Ocean World.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Ocean World - Musical Cloth Book</h5>
+                <p class="card-text">A musical cloth book on ocean animals offers numerous benefits for babies,
+                    combining sensory stimulation, early learning, and emotional development.</p>
+                <p>₨ 2,550</p>
+                <a href="https://www.educationaltoys.pk/product/bird-paradise-musical-cloth-book-2/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/Bird Paradise.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Bird Paradise - Musical Cloth Book</h5>
+                <p class="card-text">A musical cloth book on birds offers numerous benefits for babies, combining
+                    sensory stimulation, early learning, and emotional development.</p>
+                <p>₨ 2,550</p>
+                <a href="https://www.educationaltoys.pk/product/bird-paradise-musical-cloth-book/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/Look,it's moo moo cow.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title card-text-bottom">Look, it's Moo Moo Cow - Lift-the-flap (Board Book)</h5>
+                <p class="card-text">Introducing an exciting new multi-sensory board book series written by Camilla
+                    Reid, with illustrations from acclaimed collage artist Clare Youngs!</p>
+                <p>₨ 995</p>
+                <a href="https://www.educationaltoys.pk/product/look-its-moo-moo-cow-lift-the-flap-board-book/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/my first busy book.webp" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">My First Busy Book - Quiet Book</h5>
+                <p class="card-text">Introduces fundamental concepts like numbers, letters, shapes, and colors in
+                    engaging ways. Keeps children engaged and entertained also inforcing important concepts.</p>
+                <p>₨ 2,695</p>
+                <a href="https://www.educationaltoys.pk/product/my-first-busy-book-quiet-book/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/My first book.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">My First Book: a black-and-white cloth book</h5>
+                <p class="card-text">Young babies will love snuggling up with this soft, padded cloth book!
+                    With simple images and black-and-white illustrations, designed to develop babie's eyesight.</p>
+                <p>₨ 695</p>
+                <a href="https://www.educationaltoys.pk/product/my-first-book-a-black-and-white-cloth-book/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/give-thank-you-a-try.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Give Thankyou A Try - Picture Storybook</h5>
+                <p class="card-text">James Patterson, author of Give Please a Chance, continues his celebration of
+                    kindness and appreciation in this follow-up picture book about the power of saying 'thank you'.
+                </p>
+                <p>₨ 1,150</p>
+                <a href="https://www.educationaltoys.pk/product/give-thankyou-a-try-picture-storybook/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/DK-Find-out-Reptiles-and-Amphibians.jpg" class="card-img-top"
+                alt="..." style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">DK Find out! Reptiles and Amphibians (Hardcover)</h5>
+                <p class="card-text">Find out all about wriggling reptiles and amazing amphibians! DKfindout! Reptiles
+                    and Amphibians takes kids close to all kinds of cold blooded creatures with beautiful photography.
+                </p>
+                <p>₨ 995</p>
+                <a href="https://www.educationaltoys.pk/product/dk-find-out-reptiles-and-amphibians-hardcover/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/Bird Tails.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Bird Tails - Soft Crinkle Cloth Book for Babies</h5>
+                <p class="card-text">Bird Tails soft cloth book has vibrant images with vivid colors. Bright colors on
+                    the book can hold your little one's attention. Portable design for easy and convenient carry around.
+                </p>
+                <p>₨ 1,095</p>
+                <a href="https://www.educationaltoys.pk/product/bird-tails-soft-crinkle-cloth-book-for-babies/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/Quiet kids book.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Kate Quiet Book - Busy Book for kids</h5>
+                <p class="card-text">Quiet busy books stimulate cognitive development by engaging children in activities
+                    that promote problem-solving, memory retention, and critical thinking.</p>
+                <p>₨ 1,895</p>
+                <a href="https://www.educationaltoys.pk/product/kate-quite-book-busy-book-for-kids/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/out-and-about.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Spot the Differences: Out and About Board Book- DK</h5>
+                <p class="card-text">Playful, learning, and fun come together in DK's new board-book Spotthe Difference
+                    series, which encourages children ages 2-5 to recognize patterns and use logical thinking skills.
+                </p>
+                <p>₨ 995</p>
+                <a href="https://www.educationaltoys.pk/product/spot-the-differences-out-and-about-board-book-dk/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>   
+<div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/marvelbag.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Character School Bag</h5>
+                <p class="card-text"> Embark on your daily school adventures with this Marvel backpack that fuels you up
+                    to tackle challenges. It's a reliable companion to carry all your school notebooks.</p>
+                <p>₨ 3,999</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/bp-avenger-school-bag"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/spacemannotebook.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Note Book/Diary For Kids</h5>
+                <p class="card-text">This notebook with an exciting Space cover and crisp white pages inspires you and
+                    your kids to pen down thoughts, take notes, draw, and or doodle during free time.</p>
+                <p>₨ 725</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/note-book-diary-for-kids-2"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/barbienotebook.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Character Note Book/Diary For Kids</h5>
+                <p class="card-text">This notebook with a fab Barbie cover and crisp white pages inspires you and your
+                    kids to pen down thoughts, take notes, draw, and or doodle during free time.</p>
+                <p>₨ 725</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/diary-3253-barbie"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/waterbottlespiderman.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">WATER BOTTLE STAINLESS STEEL 500ml</h5>
+                <p class="card-text">Switch to a stainless steel water bottle for a smart way to stay hydrated. The
+                    bottle boasts a bright design and a straw that kids for quick and easy sipping.</p>
+                <p>₨ 1,825</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/water-bottle-steel-307-e-c-13"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/pouch.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">3D STATIONARY PENCIL ART POUCH FOR KIDS</h5>
+                <p class="card-text">This eye-catching and playful 3D pencil box is designed to make school supplies
+                    stand out and excite kids to tackle their schoolwork.</p>
+                <p>₨ 1,399</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/pencil-pouch-art-04-e-c-a"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/colorpencil.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Color Pencil 12PCs</h5>
+                <p class="card-text">Add a burst of colors with these colored pencils. Whether sketching, coloring, or
+                    crafting, these pencils deliver smooth, precise lines.</p>
+                <p>₨ 249</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/color-pencil-040-e-c-red-black"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/frozenboard.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Black & White Board</h5>
+                <p class="card-text">This double sided white and black board sparks creativity and learning in an
+                    interactive way that's perfect for educational activities.</p>
+                <p>₨ 399</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/white-black-board-6"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/waterbottleforgirls.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Water Bottle 650ml</h5>
+                <p class="card-text">Get a vibrant and durable Kids' Water Bottle for daily hydration. It is perfect for
+                    backpacks and can be used for school or outdoor activities.</p>
+                <p>₨ 1,299</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/water-bottle-plastic-650ml-yy-207"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/The Art Studio 56PCs.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">The Art Studio 56PCs</h5>
+                <p class="card-text">This Color Kit of 56 pieces is a comprehensive set that brings creativity to life!
+                    Whether sketching, coloring, or creating unique characters.</p>
+                <p>₨ 5,246</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/the-art-studio-56pcs"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/Lunch Box For Kids.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Lunch Box For Kids</h5>
+                <p class="card-text">This kid-friendly lunch box of superior quality, this lunch box is
+                    kid-friendly so you can enjoy and keep your food healthy while away from home.</p>
+                <p>₨ 1,895</p>
+                <a href="https://www.educationaltoys.pk/product/kate-quite-book-busy-book-for-kids/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+<div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbook123.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Friendship With Counting Book</h5>
+                <p class="card-text">Friendship With Counting Book makes learning numbers fun and easy by combining
+                    adorable characters that teach kids how to count.</p>
+                <p>₨ 275</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/friendship-with-counting-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookABC.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Friendship With Alphabet Book</h5>
+                <p class="card-text">Friendship With Alphabet Book makes learning letters fun and easy by combining
+                    adorable characters that teach kids the alphabet.</p>
+                <p>₨ 350</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/friendship-with-alphabet-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookbirds.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Birds Reading Book</h5>
+                <p class="card-text">Birds Reading Book makes learning about birds fun and easy by combining adorable
+                    characters that teach kids about different bird species.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-birds-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookURDU.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Friendship With Urdu Book</h5>
+                <p class="card-text">Friendship With Urdu Book makes learning Urdu fun and easy by combining adorable
+                    characters that teach kids the Urdu language.</p>
+                <p>₨ 275</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/friendship-with-urdu-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookvehicles.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Vehicles Reading Book</h5>
+                <p class="card-text">Vehicles Reading Book makes learning about vehicles fun and easy by combining
+                    adorable characters that teach kids about different types of vehicles.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-vehicles-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookvegetables.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Vegetables Reading Book</h5>
+                <p class="card-text">Vegetables Reading Book makes learning about vegetables fun and easy by combining
+                    adorable characters that teach kids about different kinds of vegetables.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-vegetables-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookFruits.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Fruits Reading Book</h5>
+                <p class="card-text">Fruits Reading Book makes learning about fruits fun and easy by combining adorable
+                    characters that teach kids about different types of fruits.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-fruits-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookBodyParts.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Body Parts Reading Book</h5>
+                <p class="card-text">Body Parts Reading Book makes exploring body parts fun and easy by using charming
+                    characters to introduce kids to different parts of the body.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-body-parts-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookAnimals.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Animals Reading Book</h5>
+                <p class="card-text">Animals Reading Book makes learning about tiny animals fun and easy by
+                    showcasing delightful characters that introduce kids to the world of mini creatures.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-animals-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookUrduPoems.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Poems Reading Book</h5>
+                <p class="card-text">Poems Reading Book makes discovering poetry fun and easy by featuring charming
+                    characters that introduce kids to a variety of delightful poems.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-poems-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+<div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Montessori-Wooden-Space-Ships-Peg-Puzzle-Board.jpg" class="card-img-top"
+                alt="..." style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Montessori Wooden Space Ships Peg Puzzle Board</h5>
+                <p class="card-text">Montessori Wooden Space Ships Peg Puzzle Board also encourages imaginative play and
+                    basic space exploration skills by featuring different spacecraft designs.</p>
+                <p>₨ 560</p>
+                <a href="https://schoolmall.pk/shop/montessori-wooden-space-ships-peg-puzzle-board-1590n/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Montessori-Wooden-Occupation-Peg-Puzzle-Board.jpg" class="card-img-top"
+                alt="..." style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Montessori Wooden Occupation Puzzle Board</h5>
+                <p class="card-text">Montessori Wooden Occupation Peg Puzzle Board encourages imaginative play and
+                    basic occupational skills by featuring different professions.</p>
+                <p>₨ 560</p>
+                <a href="https://schoolmall.pk/shop/montessori-wooden-occupation-peg-puzzle-board-1590m/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Montessori-Wooden-Tools-Peg-Puzzle-Board.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Montessori Wooden Tools Peg Puzzle Board</h5>
+                <p class="card-text">Montessori Wooden Tools Peg Puzzle Board also encourages imaginative play and basic
+                    tool recognition skills by featuring various hand tools.</p>
+                <p>₨ 560</p>
+                <a href="https://schoolmall.pk/shop/montessori-wooden-tools-peg-puzzle-board-1590j/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Wooden-Counting-Frame-Abacus.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Wooden Counting Frame Abacus</h5>
+                <p class="card-text">Wooden Counting Frame Abacus also encourages imaginative play and basic counting
+                    skills by featuring colorful beads that help kids learn arithmetic.</p>
+                <p>₨ 1,590</p>
+                <a href="https://schoolmall.pk/shop/wooden-counting-frame-abacus-1726/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/950ml-Water-Bottle.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">950ml Appollo Houseware Water Bottle</h5>
+                <p class="card-text">950ml Appollo Houseware Water Bottle also encourages hydration and basic water
+                    management skills by featuring a durable, easy-to-use design.</p>
+                <p>₨ 760</p>
+                <a href="https://schoolmall.pk/shop/950ml-bpa-free-appollo-houseware-water-bottle/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Wooden-Colorful-Beads-Abacus.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Wooden Colorful Abacus with Stand</h5>
+                <p class="card-text">Wooden Colorful Beads Abacus with Stand also encourages imaginative play and basic
+                    counting skills by featuring vibrant beads and a sturdy stand.</p>
+                <p>₨ 1,299</p>
+                <a href="https://schoolmall.pk/shop/wooden-colorful-beads-abacus-with-stand-1729/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/2-in-1-Magnetic-Drawing.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">2 in 1 Magnetic Drawing Board</h5>
+                <p class="card-text">2 in 1 Magnetic Drawing Board also encourages imaginative play and basic drawing
+                    skills by featuring a dual-function design for both sketching and writing.</p>
+                <p>₨ 1,850</p>
+                <a href="https://schoolmall.pk/shop/2-in-1-magnetic-drawing-board-1723/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Body-Parts-Boy.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Body Parts Wooden Peg Puzzle Board Boy</h5>
+                <p class="card-text">Body Parts Wooden Peg Puzzle Board Boy encourages imaginative play and basic
+                    body awareness by featuring a detailed boy figure with body parts.</p>
+                <p>₨ 799</p>
+                <a href="https://schoolmall.pk/shop/body-parts-wooden-peg-puzzle-board-boy/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/26-Pcs-Capital-Alphabets-Stamps.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">26 Pcs Capital Alphabets Stamps for Kids</h5>
+                <p class="card-text">26 Pcs Capital Alphabets Stamps for Kids encourage imaginative play and basic
+                    letter recognition skills by featuring a complete set of uppercase alphabet stamps.</p>
+                <p>₨ 999</p>
+                <a href="https://schoolmall.pk/shop/26-pcs-capital-alphabets-stamps-for-kids/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Montessori-Wooden-Geometric-Metal.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Montessori Wooden Geometric Metal Shapes</h5>
+                <p class="card-text">Montessori Wooden Geometric Metal Inset Shapes helps kids basic shape recognition
+                    skills by featuring various geometric shapes with metal inset designs.</p>
+                <p>₨ 6,600</p>
+                <a href="https://schoolmall.pk/shop/montessori-wooden-geometric-metal-inset-shapes/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="ksb" class="section d-flex flex-wrap justify-content-center d-none">
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/Ocean World.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Ocean World - Musical Cloth Book</h5>
+                <p class="card-text">A musical cloth book on ocean animals offers numerous benefits for babies,
+                    combining sensory stimulation, early learning, and emotional development.</p>
+                <p>₨ 2,550</p>
+                <a href="https://www.educationaltoys.pk/product/bird-paradise-musical-cloth-book-2/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/Bird Paradise.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Bird Paradise - Musical Cloth Book</h5>
+                <p class="card-text">A musical cloth book on birds offers numerous benefits for babies, combining
+                    sensory stimulation, early learning, and emotional development.</p>
+                <p>₨ 2,550</p>
+                <a href="https://www.educationaltoys.pk/product/bird-paradise-musical-cloth-book/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/Look,it's moo moo cow.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title card-text-bottom">Look, it's Moo Moo Cow - Lift-the-flap (Board Book)</h5>
+                <p class="card-text">Introducing an exciting new multi-sensory board book series written by Camilla
+                    Reid, with illustrations from acclaimed collage artist Clare Youngs!</p>
+                <p>₨ 995</p>
+                <a href="https://www.educationaltoys.pk/product/look-its-moo-moo-cow-lift-the-flap-board-book/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/my first busy book.webp" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">My First Busy Book - Quiet Book</h5>
+                <p class="card-text">Introduces fundamental concepts like numbers, letters, shapes, and colors in
+                    engaging ways. Keeps children engaged and entertained also inforcing important concepts.</p>
+                <p>₨ 2,695</p>
+                <a href="https://www.educationaltoys.pk/product/my-first-busy-book-quiet-book/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/My first book.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">My First Book: a black-and-white cloth book</h5>
+                <p class="card-text">Young babies will love snuggling up with this soft, padded cloth book!
+                    With simple images and black-and-white illustrations, designed to develop babie's eyesight.</p>
+                <p>₨ 695</p>
+                <a href="https://www.educationaltoys.pk/product/my-first-book-a-black-and-white-cloth-book/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/give-thank-you-a-try.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Give Thankyou A Try - Picture Storybook</h5>
+                <p class="card-text">James Patterson, author of Give Please a Chance, continues his celebration of
+                    kindness and appreciation in this follow-up picture book about the power of saying 'thank you'.
+                </p>
+                <p>₨ 1,150</p>
+                <a href="https://www.educationaltoys.pk/product/give-thankyou-a-try-picture-storybook/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/DK-Find-out-Reptiles-and-Amphibians.jpg" class="card-img-top"
+                alt="..." style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">DK Find out! Reptiles and Amphibians (Hardcover)</h5>
+                <p class="card-text">Find out all about wriggling reptiles and amazing amphibians! DKfindout! Reptiles
+                    and Amphibians takes kids close to all kinds of cold blooded creatures with beautiful photography.
+                </p>
+                <p>₨ 995</p>
+                <a href="https://www.educationaltoys.pk/product/dk-find-out-reptiles-and-amphibians-hardcover/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/Bird Tails.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Bird Tails - Soft Crinkle Cloth Book for Babies</h5>
+                <p class="card-text">Bird Tails soft cloth book has vibrant images with vivid colors. Bright colors on
+                    the book can hold your little one's attention. Portable design for easy and convenient carry around.
+                </p>
+                <p>₨ 1,095</p>
+                <a href="https://www.educationaltoys.pk/product/bird-tails-soft-crinkle-cloth-book-for-babies/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/Quiet kids book.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Kate Quiet Book - Busy Book for kids</h5>
+                <p class="card-text">Quiet busy books stimulate cognitive development by engaging children in activities
+                    that promote problem-solving, memory retention, and critical thinking.</p>
+                <p>₨ 1,895</p>
+                <a href="https://www.educationaltoys.pk/product/kate-quite-book-busy-book-for-kids/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids story books/out-and-about.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Spot the Differences: Out and About Board Book- DK</h5>
+                <p class="card-text">Playful, learning, and fun come together in DK's new board-book Spotthe Difference
+                    series, which encourages children ages 2-5 to recognize patterns and use logical thinking skills.
+                </p>
+                <p>₨ 995</p>
+                <a href="https://www.educationaltoys.pk/product/spot-the-differences-out-and-about-board-book-dk/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="schsup" class="section d-flex flex-wrap justify-content-center d-none">
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/marvelbag.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Character School Bag</h5>
+                <p class="card-text"> Embark on your daily school adventures with this Marvel backpack that fuels you up
+                    to tackle challenges. It's a reliable companion to carry all your school notebooks.</p>
+                <p>₨ 3,999</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/bp-avenger-school-bag"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/spacemannotebook.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Note Book/Diary For Kids</h5>
+                <p class="card-text">This notebook with an exciting Space cover and crisp white pages inspires you and
+                    your kids to pen down thoughts, take notes, draw, and or doodle during free time.</p>
+                <p>₨ 725</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/note-book-diary-for-kids-2"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/barbienotebook.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Character Note Book/Diary For Kids</h5>
+                <p class="card-text">This notebook with a fab Barbie cover and crisp white pages inspires you and your
+                    kids to pen down thoughts, take notes, draw, and or doodle during free time.</p>
+                <p>₨ 725</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/diary-3253-barbie"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/waterbottlespiderman.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">WATER BOTTLE STAINLESS STEEL 500ml</h5>
+                <p class="card-text">Switch to a stainless steel water bottle for a smart way to stay hydrated. The
+                    bottle boasts a bright design and a straw that kids for quick and easy sipping.</p>
+                <p>₨ 1,825</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/water-bottle-steel-307-e-c-13"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/pouch.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">3D STATIONARY PENCIL ART POUCH FOR KIDS</h5>
+                <p class="card-text">This eye-catching and playful 3D pencil box is designed to make school supplies
+                    stand out and excite kids to tackle their schoolwork.</p>
+                <p>₨ 1,399</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/pencil-pouch-art-04-e-c-a"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/colorpencil.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Color Pencil 12PCs</h5>
+                <p class="card-text">Add a burst of colors with these colored pencils. Whether sketching, coloring, or
+                    crafting, these pencils deliver smooth, precise lines.</p>
+                <p>₨ 249</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/color-pencil-040-e-c-red-black"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/frozenboard.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Black & White Board</h5>
+                <p class="card-text">This double sided white and black board sparks creativity and learning in an
+                    interactive way that's perfect for educational activities.</p>
+                <p>₨ 399</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/white-black-board-6"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/waterbottleforgirls.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Water Bottle 650ml</h5>
+                <p class="card-text">Get a vibrant and durable Kids' Water Bottle for daily hydration. It is perfect for
+                    backpacks and can be used for school or outdoor activities.</p>
+                <p>₨ 1,299</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/water-bottle-plastic-650ml-yy-207"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/The Art Studio 56PCs.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">The Art Studio 56PCs</h5>
+                <p class="card-text">This Color Kit of 56 pieces is a comprehensive set that brings creativity to life!
+                    Whether sketching, coloring, or creating unique characters.</p>
+                <p>₨ 5,246</p>
+                <a href="https://bachaaparty.com/collections/school-supplies/products/the-art-studio-56pcs"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/School supplies/Lunch Box For Kids.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Lunch Box For Kids</h5>
+                <p class="card-text">This kid-friendly lunch box of superior quality, this lunch box is
+                    kid-friendly so you can enjoy and keep your food healthy while away from home.</p>
+                <p>₨ 1,895</p>
+                <a href="https://www.educationaltoys.pk/product/kate-quite-book-busy-book-for-kids/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="link2" class="section d-flex flex-wrap justify-content-center d-none">
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbook123.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Friendship With Counting Book</h5>
+                <p class="card-text">Friendship With Counting Book makes learning numbers fun and easy by combining
+                    adorable characters that teach kids how to count.</p>
+                <p>₨ 275</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/friendship-with-counting-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookABC.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Friendship With Alphabet Book</h5>
+                <p class="card-text">Friendship With Alphabet Book makes learning letters fun and easy by combining
+                    adorable characters that teach kids the alphabet.</p>
+                <p>₨ 350</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/friendship-with-alphabet-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookbirds.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Birds Reading Book</h5>
+                <p class="card-text">Birds Reading Book makes learning about birds fun and easy by combining adorable
+                    characters that teach kids about different bird species.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-birds-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookURDU.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Friendship With Urdu Book</h5>
+                <p class="card-text">Friendship With Urdu Book makes learning Urdu fun and easy by combining adorable
+                    characters that teach kids the Urdu language.</p>
+                <p>₨ 275</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/friendship-with-urdu-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookvehicles.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Vehicles Reading Book</h5>
+                <p class="card-text">Vehicles Reading Book makes learning about vehicles fun and easy by combining
+                    adorable characters that teach kids about different types of vehicles.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-vehicles-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookvegetables.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Vegetables Reading Book</h5>
+                <p class="card-text">Vegetables Reading Book makes learning about vegetables fun and easy by combining
+                    adorable characters that teach kids about different kinds of vegetables.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-vegetables-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookFruits.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Fruits Reading Book</h5>
+                <p class="card-text">Fruits Reading Book makes learning about fruits fun and easy by combining adorable
+                    characters that teach kids about different types of fruits.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-fruits-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookBodyParts.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Body Parts Reading Book</h5>
+                <p class="card-text">Body Parts Reading Book makes exploring body parts fun and easy by using charming
+                    characters to introduce kids to different parts of the body.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-body-parts-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookAnimals.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Animals Reading Book</h5>
+                <p class="card-text">Animals Reading Book makes learning about tiny animals fun and easy by
+                    showcasing delightful characters that introduce kids to the world of mini creatures.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-animals-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/kids learning books/kidslearningbookUrduPoems.png" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Junior Mini Poems Reading Book</h5>
+                <p class="card-text">Poems Reading Book makes discovering poetry fun and easy by featuring charming
+                    characters that introduce kids to a variety of delightful poems.</p>
+                <p>₨ 145</p>
+                <a href="https://khanaan.pk/collections/kids-learning-books/products/junior-mini-poems-reading-book"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <div id="link3" class="section d-flex flex-wrap justify-content-center d-none">
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Montessori-Wooden-Space-Ships-Peg-Puzzle-Board.jpg" class="card-img-top"
+                alt="..." style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Montessori Wooden Space Ships Peg Puzzle Board</h5>
+                <p class="card-text">Montessori Wooden Space Ships Peg Puzzle Board also encourages imaginative play and
+                    basic space exploration skills by featuring different spacecraft designs.</p>
+                <p>₨ 560</p>
+                <a href="https://schoolmall.pk/shop/montessori-wooden-space-ships-peg-puzzle-board-1590n/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Montessori-Wooden-Occupation-Peg-Puzzle-Board.jpg" class="card-img-top"
+                alt="..." style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Montessori Wooden Occupation Puzzle Board</h5>
+                <p class="card-text">Montessori Wooden Occupation Peg Puzzle Board encourages imaginative play and
+                    basic occupational skills by featuring different professions.</p>
+                <p>₨ 560</p>
+                <a href="https://schoolmall.pk/shop/montessori-wooden-occupation-peg-puzzle-board-1590m/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Montessori-Wooden-Tools-Peg-Puzzle-Board.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Montessori Wooden Tools Peg Puzzle Board</h5>
+                <p class="card-text">Montessori Wooden Tools Peg Puzzle Board also encourages imaginative play and basic
+                    tool recognition skills by featuring various hand tools.</p>
+                <p>₨ 560</p>
+                <a href="https://schoolmall.pk/shop/montessori-wooden-tools-peg-puzzle-board-1590j/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Wooden-Counting-Frame-Abacus.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Wooden Counting Frame Abacus</h5>
+                <p class="card-text">Wooden Counting Frame Abacus also encourages imaginative play and basic counting
+                    skills by featuring colorful beads that help kids learn arithmetic.</p>
+                <p>₨ 1,590</p>
+                <a href="https://schoolmall.pk/shop/wooden-counting-frame-abacus-1726/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/950ml-Water-Bottle.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">950ml Appollo Houseware Water Bottle</h5>
+                <p class="card-text">950ml Appollo Houseware Water Bottle also encourages hydration and basic water
+                    management skills by featuring a durable, easy-to-use design.</p>
+                <p>₨ 760</p>
+                <a href="https://schoolmall.pk/shop/950ml-bpa-free-appollo-houseware-water-bottle/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Wooden-Colorful-Beads-Abacus.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Wooden Colorful Abacus with Stand</h5>
+                <p class="card-text">Wooden Colorful Beads Abacus with Stand also encourages imaginative play and basic
+                    counting skills by featuring vibrant beads and a sturdy stand.</p>
+                <p>₨ 1,299</p>
+                <a href="https://schoolmall.pk/shop/wooden-colorful-beads-abacus-with-stand-1729/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/2-in-1-Magnetic-Drawing.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">2 in 1 Magnetic Drawing Board</h5>
+                <p class="card-text">2 in 1 Magnetic Drawing Board also encourages imaginative play and basic drawing
+                    skills by featuring a dual-function design for both sketching and writing.</p>
+                <p>₨ 1,850</p>
+                <a href="https://schoolmall.pk/shop/2-in-1-magnetic-drawing-board-1723/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Body-Parts-Boy.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Body Parts Wooden Peg Puzzle Board Boy</h5>
+                <p class="card-text">Body Parts Wooden Peg Puzzle Board Boy encourages imaginative play and basic
+                    body awareness by featuring a detailed boy figure with body parts.</p>
+                <p>₨ 799</p>
+                <a href="https://schoolmall.pk/shop/body-parts-wooden-peg-puzzle-board-boy/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/26-Pcs-Capital-Alphabets-Stamps.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">26 Pcs Capital Alphabets Stamps for Kids</h5>
+                <p class="card-text">26 Pcs Capital Alphabets Stamps for Kids encourage imaginative play and basic
+                    letter recognition skills by featuring a complete set of uppercase alphabet stamps.</p>
+                <p>₨ 999</p>
+                <a href="https://schoolmall.pk/shop/26-pcs-capital-alphabets-stamps-for-kids/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+        <div class="card mx-3 mb-3 text-center" style="width: 18rem;">
+            <img src="assests/Shop/toys/Montessori-Wooden-Geometric-Metal.jpg" class="card-img-top" alt="..."
+                style="height: 286px;width: 286px;">
+            <div class="card-body">
+                <h5 class="card-title">Montessori Wooden Geometric Metal Shapes</h5>
+                <p class="card-text">Montessori Wooden Geometric Metal Inset Shapes helps kids basic shape recognition
+                    skills by featuring various geometric shapes with metal inset designs.</p>
+                <p>₨ 6,600</p>
+                <a href="https://schoolmall.pk/shop/montessori-wooden-geometric-metal-inset-shapes/"
+                    class="w-100 btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #ffd500;">
+        <!-- Grid container -->
+        <div class="container-fluid">
+            <!-- Section: Links -->
+            <section class="mt-5">
+                <!-- Grid row-->
+                <div class="row text-center d-flex justify-content-center pt-5">
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="index.html" class="text-decoration-none" style="color: #ff5c77;">Home</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Arithmatic.html" class="text-decoration-none"
+                                style="color: #00b8d9;">Arithmetic</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="PrayersandRhymes.html" class="text-decoration-none" style="color: #ff5c77;">Prayers
+                                and Nursery
+                                Rhymes</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Shop.html" class="text-decoration-none" style="color: #00b8d9;">Shop</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Worksheets.html" class="text-decoration-none"
+                                style="color: #ff5c77;">Worksheets</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="About Us.html" class="text-decoration-none" style="color: #00b8d9;">About Us</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2">
+                        <h6 class="text-uppercase font-weight-bold">
+                            <a href="Privacy Policy.html" class="text-decoration-none" style="color: #ff5c77;">Privacy
+                                Policy</a>
+                        </h6>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-5" style="border-color: #ff5c77;" />
+
+            <!-- Section: Text -->
+            <section class="mb-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <p>
+                            Thank you for visiting Kids Zone, where learning and fun go hand in hand! Explore our
+                            engaging activities,
+                            from alphabet learning to arithmetic challenges and interactive worksheets. Join us in
+                            nurturing young
+                            minds and fostering a love for learning. Stay updated with our latest events and programs!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Social -->
+            <!-- Section: Social -->
+            <!-- Section: Social -->
+            <section class="text-center mb-5">
+                <a href="https://www.facebook.com/yourpage" class="text-danger me-4">
+                    <i class="fab fa-facebook-f" style="color: #ff5c77; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.twitter.com/yourpage" class="text-primary me-4">
+                    <i class="fab fa-twitter" style="color: #00b8d9; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.google.com/yourpage" class="text-danger me-4">
+                    <i class="fab fa-google" style="color: #c62828; font-size: 2rem;"></i>
+                    <!-- Darkened the Google color -->
+                </a>
+                <a href="https://www.instagram.com/yourpage" class="text-danger me-4">
+                    <i class="fab fa-instagram" style="color: #ff5c77; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.linkedin.com/yourpage" class="text-info me-4">
+                    <i class="fab fa-linkedin" style="color: #00b8d9; font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.github.com/yourpage" class="text-dark me-4">
+                    <i class="fab fa-github" style="color: #24292e; font-size: 2rem;"></i>
+                    <!-- Darkened the GitHub color -->
+                </a>
+            </section>
+
+            <!-- Section: Social -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(255, 34, 0, 0.465);">
+            © 2024 Copyright:
+            <a class="text-white" href="https://KidsZone.com/">KidsZone.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Footer -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">YouTube Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="modalVideo" width="100%" height="315" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            console.log("Function called with sectionId:", sectionId);
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.add('d-none');
+            });
+
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.remove('d-none');
+                console.log("Section shown:", sectionId);
+            } else {
+                console.log("Section not found:", sectionId);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            showSection('sf');
+        });
+    </script>
+</body>
+
+</html>

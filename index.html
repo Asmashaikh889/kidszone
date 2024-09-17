@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidsZone</title>
+  <link rel="icon" href="assests/logo3.jpg" type="image/icon type">
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+  <!-- ============== Bootstrap Link =========== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- =============== Font Awesome Link ================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-image: url('images/body_back\ \(1\).png');
+    font-family: 'Arial', cursive, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+  }
+
+  /* ============ Navbar Color and Hover ============ */
+  #navbarSupportedContent .nav-item img {
+    width: 20px;  /* Adjust width to desired size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px;  /* Space between image and text */
+}
+
+
+#navbarSupportedContent .nav-link {
+    font-size: 16px; /* Adjust font size */
+    padding: 10px 15px; /* Adjust padding for equal spacing */
+    display: flex;
+    align-items: center; /* Aligns text and image vertically */
+}
+
+
+@media (max-width: 768px) {
+    #navbarSupportedContent .nav-item img {
+        width: 15px;  /* Smaller size for mobile */
+    }
+    #navbarSupportedContent .nav-link {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px 10px;
+    }
+}
+
+  .navbar .navbar-nav .nav-link:hover {
+    background-color: #ff0381;
+    color: #ffd500;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    padding: 0.6em;
+    font-size: 1.2em;
+    transition: all 0.5s;
+  }
+
+  .navbar .navbar-brand {
+    padding: 0 0.6em;
+    font-size: 1.5em;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .navbar {
+      padding: 0;
+    }
+
+    .navbar .navbar-nav .nav-link {
+      padding: 1em 0.7em;
+    }
+
+    .navbar .navbar-brand {
+      padding: 0 0.8em;
+    }
+
+    #login {
+      padding: 1em 0.7em;
+    }
+
+
+
+  }
+
+  #login {
+    color: #ff0381;
+
+  }
+
+  #login:hover {
+    color: #ffd500;
+    background-color: #ff0381;
+    padding: 0.6em;
+    font-size: 1.2em;
+    transition: all 0.5s;
+  }
+
+  .c-item {
+    height: 480px;
+  }
+
+  .c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+
+  /* =========== Scroll Bar ===== */
+  ::-webkit-scrollbar {
+    width: 0.625rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(228, 76, 76);
+  }
+
+  /* ============= Navbar Images =========== */
+  #home {
+    height: 50px;
+    width: 50px;
+  }
+
+  #Alphabets {
+    height: 50px;
+    width: 50px;
+  }
+
+  #Numbers {
+    height: 50px;
+    width: 50px;
+  }
+
+
+  /* =============== Section Images ========= */
+  #section1 {
+    height: 300px;
+    width: 300px;
+    border: none;
+    border-radius: 5%;
+
+  }
+
+  footer a {
+    outline: none;
+    text-decoration-line: none;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    background-color: #ffffff;
+  }
+
+  .container .contents-wraper {
+    width: auto;
+    min-height: inherit;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .contents-wraper .header h1 {
+    position: relative;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .contents-wraper .header h1::before {
+    content: '';
+    width: 200px;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+  }
+
+
+  .contents-wraper .indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .contents-wraper .indicators .dot {
+    width: 15px;
+    height: 15px;
+    margin: 0px 3px;
+    border: 3px solid #aaa;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+  }
+
+  .contents-wraper .indicators .active {
+    background-color: #006994;
+  }
+
+  @keyframes next1 {
+    from {
+      left: 0%;
+    }
+
+    to {
+      left: -100%;
+    }
+  }
+
+  @keyframes next2 {
+    from {
+      left: 100%;
+    }
+
+    to {
+      left: 0%;
+    }
+  }
+
+  @keyframes prev1 {
+    from {
+      left: 0%;
+    }
+
+    to {
+      left: 100%;
+    }
+  }
+
+  @keyframes prev2 {
+    from {
+      left: -100%;
+    }
+
+    to {
+      left: 0%;
+    }
+  }
+
+  @media(max-width: 550px) {
+    .container .contents-wraper {
+      width: 90%;
+    }
+
+    .contents-wraper .header h1 {
+      font-size: 32px;
+    }
+
+  }
+
+  /* videos  */
+  .videos {
+    background-color: #FFFFFF;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    height: 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .videos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .card-img-top {
+    height: auto;
+    flex-grow: 1;
+  }
+
+  .flip-card {
+    perspective: 1000px;
+    cursor: pointer;
+    width: 200px;
+    max-width: 200px;
+    height: 200px;
+    position: relative;
+  }
+
+  .flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateX(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateX(180deg);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .carousel-caption .btn {
+    margin-top: auto;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 768px) {
+    .carousel-caption p {
+      font-size: 5px;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-warning">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="assests/logo4.png" alt="Kids Zone" width="80" height="80">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html"><img src="assests/home.png"
+                            alt="" id="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Alphabets.html"><img src="assests/activities1.png" alt=""
+                            id="Alphabets">ABC's</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Numbers.html"><img src="assests/123.png" alt="" id="Numbers">123</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Arithmatic.html"><img src="assests/arithmetic.png" alt=""
+                            id="Numbers">Arithmatic</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="PrayersandRhymes.html"><img src="assests/rhymes (2).png" alt=""
+                            id="Numbers">Prayers & Rhymes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Shop.html"><img src="assests/shop.png" alt=""
+                            id="Numbers">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Worksheets.html"><img src="assests/activities3.png" alt=""
+                            id="Numbers">Worksheets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About Us.html"><img src="assests/about us.png" alt=""
+                            id="Numbers">About Us</a>
+                </li>
+            </ul>
+            <a class="nav-link" href="loginsignup.html" id="login"><i class="fa-solid fa-users"></i>Sign Up/ Log
+                In</a>
+        </div>
+    </div>
+</nav>
+  <!-- ============ Header ================ -->
+  <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="assests/portfolio-1.jpg" class="d-block w-100 c-img" alt="Slide 1">
+        <div class="carousel-caption top-0 mt-4">
+          <h1 class="display-1 fw-bolder text-capitalize">Learn Arithmatic</h1>
+          <p class="mt-5 fs-3 text-uppercase">🌟Explore the magic of numbers! Master ➕ and ➖ with fun math games at Kids
+            Zone!</p>
+
+          <a href="Arithmatic.html" class="btn btn-warning">Learn Now</a>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="assests/portfolio-2.jpg" class="d-block w-100 c-img" alt="Slide 2">
+        <div class="carousel-caption top-0 mt-4">
+          <h1 class="display-1 fw-bolder text-capitalize">Learn Alphabets</h1>
+          <p class="mt-5 fs-3 text-uppercase">🥳Explore letters with us! Learn A to Z through delighting alphabet games
+            at Kids Zone!</p>
+          <a href="Alphabets.html" class="btn btn-warning">Learn Now</a>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="assests/portfolio-3.jpg" class="d-block w-100 c-img" alt="Slide 3">
+        <div class="carousel-caption top-0 mt-4">
+          <h1 class="display-1 fw-bolder text-capitalize">Tracing Activities</h1>
+
+          <p class="mt-5 fs-3 text-uppercase">📚Explore our engaging alphabet worksheets for fun learning at Kids Zone!
+          </p>
+          <a href="Worksheets.html" class="btn btn-warning">Learn Now</a>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="assests/portfolio-4.jpg" class="d-block w-100 c-img" alt="Slide 4">
+        <div class="carousel-caption top-0 mt-4">
+          <h1 class="display-1 fw-bolder text-capitalize">Explore Prayers & Rhymes</h1>
+          <p class="mt-5 fs-3 text-uppercase">📺Join us for engaging prayers and delightful nursery rhymes at KidsZone!
+          </p>
+          <a href="PrayersandRhymes.html" class="btn btn-warning mb-5">Learn Now</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container-fluid text-center  mb-3 justify-content-center py-5 ">
+    <br>
+    <h1>Recently Uploaded Videos!</h1>
+
+    <div class="container-fluid mt-4">
+      <div class="row align-items-stretch">
+        <!-- Column for the four cards -->
+        <div class="col-sm-12 col-md-6">
+          <div class="row g-3">
+            <!-- First row with two cards -->
+            <div class="col-sm-6 col-md-6">
+              <div class="card d-flex videos flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                data-video-url="https://www.youtube.com/embed/G3KZ07yZyRk">
+                <img src="images/hippy advnture.jpg" class="card-img-top img-fluid" alt="Card Image 1">
+                <div class="containerr d-flex justify-content-between align-items-center" style="height: auto;">
+                  <h6><b>Hippy Advanture</b></h6>
+                  <div class="icon">
+                    <img src="images/download.png" alt="Play Icon"
+                      style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <div class="card d-flex videos flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                data-video-url="https://www.youtube.com/embed/Zu6o23Pu0Do">
+                <img src="images/rain rain.jpg" class="card-img-top" alt="Card Image 2">
+                <div class="containerr d-flex justify-content-between align-items-center" style="height: auto;">
+                  <h6><b>Rain Rain</b></h6>
+                  <div class="icon">
+                    <img src="images/download.png" alt="Play Icon"
+                      style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Second row with two cards -->
+          <div class="row g-3 mt-3">
+            <div class="col-sm-6 col-md-6">
+              <div class="card d-flex videos flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                data-video-url="https://www.youtube.com/embed/TV_x6YUdnvg">
+                <img src="images/two little.jpg" class="card-img-top" alt="Card Image 3">
+                <div class="containerr d-flex justify-content-between align-items-center" style="height: auto;">
+                  <h6><b>Two Little Hands</b></h6>
+                  <div class="icon">
+                    <img src="images/download.png" alt="Play Icon"
+                      style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <div class="card d-flex videos flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                data-video-url="https://www.youtube.com/embed/ZaIu32TWX64">
+                <img src="images/my red balun.jpg" class="card-img-top" alt="Card Image 4">
+                <div class="containerr d-flex justify-content-between align-items-center" style="height: auto;">
+                  <h6><b>My Red Ballon</b></h6>
+                  <div class="icon">
+                    <img src="images/download.png" alt="Play Icon"
+                      style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Column for the four cards -->
+        <div class="col-sm-12 col-md-6">
+          <div class="row g-3">
+            <!-- First row with two cards -->
+            <div class="col-sm-6 col-md-6">
+              <div class="card d-flex videos flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                data-video-url="https://www.youtube.com/embed/Z9gdMJvYS8g">
+                <img src="images/ringa.jpg" class="card-img-top" alt="Card Image 1">
+                <div class="containerr d-flex justify-content-between align-items-center" style="height: auto;">
+                  <h6><b>Ringa Ringa Roses</b></h6>
+                  <div class="icon">
+                    <img src="images/download.png" alt="Play Icon"
+                      style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <div class="card d-flex videos flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                data-video-url="https://www.youtube.com/embed/qM0QgQHv6Q4">
+                <img src="images/pufftrain.jpg" class="card-img-top" alt="Card Image 2">
+                <div class="containerr d-flex justify-content-between align-items-center" style="height: auto;">
+                  <h6><b>Puff a train</b></h6>
+                  <div class="icon">
+                    <img src="images/download.png" alt="Play Icon"
+                      style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Second row with two cards -->
+          <div class="row g-3 mt-3">
+            <div class="col-sm-6 col-md-6">
+              <div class="card d-flex videos flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                data-video-url="https://www.youtube.com/embed/I4lSF7QDgvM">
+                <img src="images/dipdip.jpg" class="card-img-top" alt="Card Image 3">
+                <div class="containerr d-flex justify-content-between align-items-center" style="height: auto;">
+                  <h6><b>Dip Dip Dip</b></h6>
+                  <div class="icon">
+                    <img src="images/download.png" alt="Play Icon"
+                      style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <div class="card d-flex videos flex-column" data-bs-toggle="modal" data-bs-target="#videoModal"
+                data-video-url="https://www.youtube.com/embed/R8nfbeBdHHY">
+                <img src="images/seemoon.jpg" class="card-img-top" alt="Card Image 4">
+                <div class="containerr d-flex justify-content-between align-items-center" style="height: auto;">
+                  <h6><b>I See The Moon</b></h6>
+                  <div class="icon">
+                    <img src="images/download.png" alt="Play Icon"
+                      style="height: 50px; width: 50px; margin-bottom: 20px;margin-left: 90px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ====================== Cards =================== -->
+  <div class="container-fluid text-center mb-3 justify-content-center py-5 bg-light">
+    <h1 class="section-title text-primary mb-4">Discover Our Exciting Activities!</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4 px-5">
+
+      <div class="col">
+        <div class="card h-100 bg-white shadow-sm hover-card">
+          <img src="assests/gallery-2.jpg" class="card-img-top" alt="Learn Alphabets">
+          <div class="card-body text-center">
+            <h5 class="card-title text-danger">Learn Alphabets</h5>
+            <p class="card-text text-muted">Explore our vibrant alphabet showcase with colorful illustrations.</p>
+            <a href="Alphabets.html" class="btn btn-warning w-75 go-btn">
+              ABC <i class="fas fa-long-arrow-alt-right go-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 bg-white shadow-sm hover-card">
+          <img src="assests/gallery-1.jpg" class="card-img-top" alt="Learn Numbers">
+          <div class="card-body text-center">
+            <h5 class="card-title text-danger">Learn Numbers</h5>
+            <p class="card-text text-muted">Discover lively numbers with engaging visuals and activities.</p>
+            <a href="Numbers.html" class="btn btn-warning w-75"> 123 <i
+                class="fas fa-long-arrow-alt-right go-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 bg-white shadow-sm hover-card">
+          <img src="assests/gallery-3.jpg" class="card-img-top" alt="Learn Arithmetic">
+          <div class="card-body text-center">
+            <h5 class="card-title text-danger">Learn Arithmetic</h5>
+            <p class="card-text text-muted">Join our exciting math adventure and master essential skills.</p>
+            <a href="Arithmetic.html" class="btn btn-warning w-75"> 2+3= <i
+                class="fas fa-long-arrow-alt-right go-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 bg-white shadow-sm hover-card">
+          <img src="assests/gallery-4.jpg" class="card-img-top" alt="Learn Worksheets">
+          <div class="card-body text-center">
+            <h5 class="card-title text-danger">Learn Worksheets</h5>
+            <p class="card-text text-muted">Explore interactive worksheets with fun themes and learning experiences.</p>
+            <a href="Worksheets.html" class="btn btn-warning w-75"> Tracing <i
+                class="fas fa-long-arrow-alt-right go-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- ============ Activities ================= -->
+
+  <div class="container-fluid act text-center mb-3 align-items-center px-5 ">
+    <br>
+    <h1>Exciting Activities at Kids Zone!</h1>
+    <div class="container-fluid mt-5 mb-5">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+        <div class="col">
+          <div class="card flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card-body">
+                <img src="assests/Numbers/1One.png" alt="Number 1" class="img-fluid">
+              </div>
+              <div class="flip-card-back">
+                <img src="assests/Numbers/Back/oneback.png" alt="ant" class="img-fluid">
+                <audio id="cardAudio" controls>
+                  <source src="assests/Audio/1.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card-body">
+                <img src="assests/Numbers/2Two.png" alt="Number 2" class="img-fluid">
+              </div>
+              <div class="flip-card-back">
+                <img src="assests/Numbers/Back/Twoback.png" alt="ant" class="img-fluid">
+                <audio id="cardAudio" controls>
+                  <source src="assests/Audio/2.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card-body">
+                <img src="assests/Numbers/3Three.png" alt="Number 3" class="img-fluid">
+              </div>
+              <div class="flip-card-back">
+                <img src="assests/Numbers/Back/Threeback.png" alt="ant" class="img-fluid">
+                <audio id="cardAudio" controls>
+                  <source src="assests/Audio/3.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card-body">
+                <img src="assests/Numbers/4Four.png" alt="Number 4" class="img-fluid">
+              </div>
+              <div class="flip-card-back">
+                <img src="assests/Numbers/Back/4back.png" alt="ant" class="img-fluid">
+                <audio id="cardAudio" controls>
+                  <source src="assests/Audio/4.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card-body">
+                <img src="assests/Numbers/5Five.png" alt="Number 5" class="img-fluid">
+              </div>
+              <div class="flip-card-back">
+                <img src="assests/Numbers/Back/5back.png" alt="ant" class="img-fluid">
+                <audio id="cardAudio" controls>
+                  <source src="assests/Audio/5.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card-body">
+                <img src="assests/Numbers/6Six.png" alt="Number 6" class="img-fluid">
+              </div>
+              <div class="flip-card-back">
+                <img src="assests/Numbers/Back/6back.png" alt="ant" class="img-fluid">
+                <audio id="cardAudio" controls>
+                  <source src="assests/Audio/6.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card-body">
+                <img src="assests/Numbers/7Seven.png" alt="Number 7" class="img-fluid">
+              </div>
+              <div class="flip-card-back">
+                <img src="assests/Numbers/Back/7back.png" alt="ant" class="img-fluid">
+                <audio id="cardAudio" controls>
+                  <source src="assests/Audio/7.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card-body">
+                <img src="assests/Numbers/8Eight.png" alt="Number 8" class="img-fluid">
+              </div>
+              <div class="flip-card-back">
+                <img src="assests/Numbers/Back/8back.png" alt="ant" class="img-fluid">
+                <audio id="cardAudio" controls>
+                  <source src="assests/Audio/8.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card-body">
+                <img src="assests/Numbers/9Nine.png" alt="Number 9" class="img-fluid">
+              </div>
+              <div class="flip-card-back">
+                <img src="assests/Numbers/Back/9back.png" alt="ant" class="img-fluid">
+                <audio id="cardAudio" controls>
+                  <source src="assests/Audio/9.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front card-body">
+                <img src="assests/Numbers/10Ten.png" alt="Number 10" class="img-fluid">
+              </div>
+              <div class="flip-card-back">
+                <img src="assests/Numbers/Back/10back.png" alt="ant" class="img-fluid">
+                <audio id="cardAudio" controls>
+                  <source src="assests/Audio/10.mp3" type="audio/mp3">
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <a href="Numbers.html" class="btn btn-warning w-75 go-btn mt-5">
+        Find More <i class="fas fa-long-arrow-alt-right go-arrow"></i>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- ======================= Games ============================ -->
+  <div class="container-fluid text-center mb-3 justify-content-center py-5 ">
+    <br>
+    <h1>Enjoy Our Amazing Games!</h1>
+
+    <div class="container-fluid mt-4">
+      <div class="row align-items-stretch">
+        <!-- Column for the four cards -->
+        <div class="col-sm-12 col-md-6">
+          <div class="row g-3">
+            <!-- First row with two cards -->
+            <div class="col-sm-6 col-md-6">
+              <a href="https://bubble-shooter-game.com/" style="text-decoration: none; color: inherit;">
+                <div class="card d-flex videos flex-column">
+                  <img src="images/bubbleshooter.avif" class="card-img-top img-fluid" alt="Card Image 1">
+                  <div class="containerr d-flex justify-content-between align-items-center" style="background-color: #ff6f61; color: #FFFFFF; height: 50px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                    <h6><b>Bubble Shooter</b></h6>
+                </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <a href="https://games.cdn.famobi.com/html5games/k/kk-jigsaw-puzzle/v130/?fg_domain=play.famobi.com&fg_aid=A-MJ4VU&fg_uid=1440d683-46e9-4d97-9a31-2c9751dff781&fg_pid=f8e4f1f1-d1ee-4bc4-b94a-7ab84ea26b14&fg_beat=397&original_ref=https%3A%2F%2Fwww.kidsworldfun.com%2F" style="text-decoration: none; color: inherit;">
+                <div class="card d-flex videos flex-column">
+                  <img src="images/kiba-and-kumba-jigsaw-puzzle.png" class="card-img-top img-fluid" alt="Card Image 1">
+                  <div class="containerr d-flex justify-content-between align-items-center" style="background-color: #4caf50; color: #FFFFFF; height: 50px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                    <h6><b>Kiba and Kumba</b></h6>
+                </div>
+                </div>
+              </a>
+            </div>
+            
+          </div>
+          <!-- Second row with two cards -->
+          <div class="row g-3 mt-3">
+            <div class="col-sm-6 col-md-6">
+              <a href="https://games.cdn.famobi.com/html5games/k/kitten-match/v040/?fg_domain=play.famobi.com&fg_aid=A-MJ4VU&fg_uid=49cdf995-ab49-4e73-9836-3667a4813c28&fg_pid=f8e4f1f1-d1ee-4bc4-b94a-7ab84ea26b14&fg_beat=412&original_ref=https%3A%2F%2Fwww.kidsworldfun.com%2F" style="text-decoration: none; color: inherit;">
+                <div class="card d-flex videos flex-column">
+                  <img src="images/kitenmatch.jpg" class="card-img-top img-fluid" alt="Card Image 1">
+                  <div class="containerr d-flex justify-content-between align-items-center" style="background-color: #2196f3; color: #FFFFFF; height: 50px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                    <h6><b>Kitten Match</b></h6>
+                </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <a href="https://games.cdn.famobi.com/html5games/k/kids-color-book-2/v230/?fg_domain=play.famobi.com&fg_aid=A-MJ4VU&fg_uid=03b1e156-de50-49d6-964b-01ea276eee3d&fg_pid=f8e4f1f1-d1ee-4bc4-b94a-7ab84ea26b14&fg_beat=416&original_ref=https%3A%2F%2Fwww.kidsworldfun.com%2F" style="text-decoration: none; color: inherit;">
+                <div class="card d-flex videos flex-column">
+                  <img src="images/kids-color-book-2.jpg" class="card-img-top img-fluid" alt="Card Image 1">
+                  <div class="containerr d-flex justify-content-between align-items-center" style="background-color: #673ab7; color: #FFFFFF; height: 50px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                    <h6><b>Kids' Color Book 2</b></h6>
+                </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Column for the four cards -->
+        <div class="col-sm-12 col-md-6">
+          <div class="row g-3">
+            <!-- First row with two cards -->
+            <div class="col-sm-6 col-md-6">
+              <a href="https://poki.com/en/g/subway-surfers" style="text-decoration: none; color: inherit;">
+                <div class="card d-flex videos flex-column">
+                  <img src="images/subway_banner.jpg" class="card-img-top img-fluid" alt="Card Image 1">
+                  <div class="containerr d-flex justify-content-between align-items-center" style="background-color: #ffeb3b; color: #FFFFFF; height: 50px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                    <h6><b>Subway Surfers</b></h6>
+                </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <a href="https://snake-game.io/" style="text-decoration: none; color: inherit;">
+                <div class="card d-flex videos flex-column">
+                  <img src="images/snakgame.jpg" class="card-img-top img-fluid" alt="Card Image 1">
+                  <div class="containerr d-flex justify-content-between align-items-center" style="background-color: #00bcd4; color: #FFFFFF; height: 50px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                    <h6><b>Snake Game</b></h6>
+                </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Second row with two cards -->
+          <div class="row g-3 mt-3">
+            <div class="col-sm-6 col-md-6">
+              <a href="https://poki.to/angry-birds" style="text-decoration: none; color: inherit;">
+                <div class="card d-flex videos flex-column">
+                  <img src="images/Angry-Birds-Classic-game-featured.jpg" class="card-img-top img-fluid" alt="Card Image 1">
+                  <div class="containerr d-flex justify-content-between align-items-center" style="background-color: #ff9800; color: #FFFFFF; height: 50px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                    <h6><b>Angry Birds</b></h6>
+                </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <a href="https://www.bestgames.com/Flow-Free-Online" style="text-decoration: none; color: inherit;">
+                <div class="card d-flex videos flex-column">
+                  <img src="images/colorball.png" class="card-img-top img-fluid" alt="Card Image 1">
+                  <div class="containerr d-flex justify-content-between align-items-center" style="background-color: #9c27b0; color: #FFFFFF; height: 50px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                    <h6><b>Match Color</b></h6>
+                </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-2 mb-lg-4">
+        <div class="col-12 col-lg-8 col-xxl-7 text-center mx-auto">
+          <h2 class="display-5 fw-bold text-danger">Testimonials from Happy Parents</h2>
+          <p class="lead text-warning">Discover what parents have to say about their children's experiences at KidsZone</p>
+        </div>
+      </div>
+      <div class="row py-5">
+        <div class="col-md-4 py-2 py-md-2">
+          <div class="bg-light mb-5 mb-md-0 p-2 p-lg-5 text-center position-relative">
+            <img alt="" class="rounded-circle position-absolute translate-middle top-0" height="96"
+              src="assests/testimonial-1.jpg" width="96">
+            <div class="text-primary mb-md-4 mb-2 mt-5 mt-lg-4">
+              <svg class="bi bi-quote" fill="currentColor" height="48" viewbox="0 0 16 16" width="48"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z">
+                </path>
+              </svg>
+            </div>
+            <p class="mb-4 text-warning">KidsZone has been a blessing for my daughter. It's a safe, nurturing environment where she
+              can learn and grow. The staff is friendly and attentive, and the activities are both educational and
+              entertaining. I highly recommend KidsZone to all parents!</p>
+            <h6 class="mt-4 fw-bold">Michael Smith</h6>
+            <div class="text-muted">
+              Financial Analyst
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2 py-md-2">
+          <div class="bg-light mb-5 mb-md-0 p-2 p-lg-5 text-center position-relative">
+            <img alt="" class="rounded-circle position-absolute translate-middle top-0" height="96"
+              src="assests/testimonial-2.jpg" width="96">
+            <div class="text-primary mb-md-4 mb-2 mt-5 mt-lg-4">
+              <svg class="bi bi-quote" fill="currentColor" height="48" viewbox="0 0 16 16" width="48"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z">
+                </path>
+              </svg>
+            </div>
+            <p class="mb-4 text-warning">My son absolutely loves KidsZone! It's a fantastic place for him to explore, learn, and make
+              friends. The staff is caring and professional, and the facilities are top-notch. I feel confident knowing
+              that my son is in such good hands while he's at KidsZone.</p>
+            <h6 class="mt-4 fw-bold">Sarah Johnson</h6>
+            <div class="text-muted">
+              Elementary School Teacher
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-2 py-md-2">
+          <div class="bg-light mb-5 mb-md-0 p-2 p-lg-5 text-center position-relative">
+            <img alt="" class="rounded-circle position-absolute translate-middle top-0" height="96"
+              src="assests/testimonial-3.jpg" width="96">
+            <div class="text-primary mb-md-4 mb-2 mt-5 mt-lg-4">
+              <svg class="bi bi-quote" fill="currentColor" height="48" viewbox="0 0 16 16" width="48"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z">
+                </path>
+              </svg>
+            </div>
+            <p class="mb-4 text-warning">My children love KidsZone! It's a great learning environment, with engaging videos,
+              interactive
+              alphabets, and fun number worksheets.From engaging videos and interactive alphabets to fun-filled number
+              worksheets. I couldn't ask for a better place for them to spend their time.</p>
+            <h6 class="mt-4 fw-bold">Jow Reo</h6>
+            <div class="text-muted">
+              Marketing Manager
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #ffd500;">
+      <!-- Grid container -->
+      
+                 
+                      </h6>
+                  </div>
+                  <!-- Grid column -->
+              </div>
+              <!-- Grid row-->
+          </section>
+          <!-- Section: Links -->
+
+          <hr class="my-5" style="border-color: #ff5c77;" />
+
+          <!-- Section: Text -->
+          <section class="mb-5">
+              <div class="row d-flex justify-content-center">
+                  <div class="col-lg-8">
+                      <p>
+                          Thank you for visiting Kids Zone, where learning and fun go hand in hand! Explore our
+                          engaging activities,
+                          from alphabet learning to arithmetic challenges and interactive worksheets. Join us in
+                          nurturing young
+                          minds and fostering a love for learning. Stay updated with our latest events and programs!
+                      </p>
+                  </div>
+              </div>
+          </section>
+          <!-- Section: Text -->
+
+          <!-- Section: Social -->
+          <!-- Section: Social -->
+          <!-- Section: Social -->
+          <section class="text-center mb-5">
+              <a href="https://www.facebook.com/yourpage" class="text-danger me-4">
+                  <i class="fab fa-facebook-f" style="color: #1877F2; font-size: 2rem;"></i>
+              </a>
+              <a href="https://www.twitter.com/yourpage" class="text-primary me-4">
+                  <i class="fab fa-twitter" style="color: #00b8d9; font-size: 2rem;"></i>
+              </a>
+              
+                  <!-- Darkened the Google color -->
+              </a>
+              <a href="https://www.instagram.com/yourpage" class="text-danger me-4">
+                  <i class="fab fa-instagram" style="color: #C13584; font-size: 2rem;"></i>
+              </a>
+              <a href="https://www.linkedin.com/yourpage" class="text-info me-4">
+                  <i class="fab fa-linkedin" style="color: #0072b1; font-size: 2rem;"></i>
+              </a>
+              
+                  <!-- Darkened the GitHub color -->
+              </a>
+          </section>
+
+          <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(255, 34, 0, 0.465);">
+          © 2024 Copyright:
+          <a class="text-white" href="https://KidsZone.com/">KidsZone.com</a>
+      </div>
+      <!-- Copyright -->
+  </footer>
+
+  <!-- Footer -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="videoModalLabel">YouTube Video</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <iframe id="modalVideo" width="100%" height="315" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Bootstrap JS -->
+  <script>
+    // Get the modal iframe
+    const modalVideo = document.getElementById('modalVideo');
+
+    // Add click event listener to all trigger elements
+    document.querySelectorAll('[data-video-url]').forEach(trigger => {
+      trigger.addEventListener('click', function () {
+        // Get the video URL from the trigger's data attribute
+        const videoUrl = trigger.getAttribute('data-video-url');
+
+        // Update the src of the modal iframe to the video URL
+        modalVideo.src = videoUrl;
+      });
+    });
+    // Add event listener to clear the video when the modal is closed
+    document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+      // Clear the src of the modal iframe to stop the video
+      modalVideo.src = '';
+    });
+    $(document).ready(function () {
+      // Use a class selector instead of ID to target all audio elements
+      $('.flip-card').hover(function () {
+        // Find the audio element within the current flip-card and play it
+        $(this).find('audio')[0].play();
+      }, function () {
+        // Find the audio element within the current flip-card, pause, and reset it
+        var audio = $(this).find('audio')[0];
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
